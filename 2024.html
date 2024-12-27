@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2024</title>
+    <style>
+        body {
+            background-color: #b2adbb;
+        }
+        .date {
+            font-style: italic;
+        }
+        .content {
+            font-size: 20px;
+            border: 2px solid #6c757d;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            color: #333;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div><p class='date'>2024.11.27 19.21</p>
+    <p class='content'>hi! I wrote short-thought just now.</p></div>
+<script>
+    var divs = document.body.getElementsByTagName('div');
+    var divArray = Array.prototype.slice.call(divs);
+    divArray.reverse();
+    divArray.forEach(function(div) {
+        div.parentNode.removeChild(div);
+    });
+    divArray.forEach(function(div) {
+        document.body.appendChild(div);
+    });
+</script></body>
+</html>
