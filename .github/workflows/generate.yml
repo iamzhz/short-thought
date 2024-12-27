@@ -1,9 +1,18 @@
-name: Just Try
+name: Generate
 on: push
+
+permissions:
+  contents: write
 
 jobs:
   Generate:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - run: cat to_page.c
+    - run: gcc to_page.c -o to_page
+    - run: ./to_page 2024 > build/2024.html
+    - run: rm ./to_page
+    - uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages
+        folder: build
