@@ -2,9 +2,14 @@ name: Just Try
 on: push
 
 jobs:
-  try:
+  job1:
     runs-on: ubuntu-latest
     steps:
     - run: echo "Hello, World!"
     - run: ls
     - run: pwd
+  job2:
+    runs-on: windows-latest
+    steps:
+    - run: echo "Hello, World!"
+    - run: dir
