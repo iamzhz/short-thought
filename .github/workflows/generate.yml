@@ -5,12 +5,12 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-    - run: node --version
-    - run: gcc --version
-    - run: python --version
+    - run: node --version > node-version.txt
+    - run: gcc --version > gcc-version.txt
+    - run: python --version > python-version.txt
   job2:
     runs-on: windows-latest
     steps:
-    - run: node --version
-    - run: gcc --version
-    - run: python --version
+    - run: node --version > node-version.txt
+    - run: gcc --version > gcc-version.txt
+    - run: python --version > python-version.txt
