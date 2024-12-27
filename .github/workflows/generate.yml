@@ -2,15 +2,8 @@ name: Just Try
 on: push
 
 jobs:
-  job1:
+  Generate:
     runs-on: ubuntu-latest
     steps:
-    - run: node --version > node-version.txt
-    - run: gcc --version > gcc-version.txt
-    - run: python --version > python-version.txt
-  job2:
-    runs-on: windows-latest
-    steps:
-    - run: node --version > node-version.txt
-    - run: gcc --version > gcc-version.txt
-    - run: python --version > python-version.txt
+    - uses: actions/checkout@v4
+    - run: cat to_page.c
