@@ -5,11 +5,12 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-    - run: echo "Hello, World!"
-    - run: ls
-    - run: pwd
+    - run: node --version
+    - run: gcc --version
+    - run: python --version
   job2:
     runs-on: windows-latest
     steps:
-    - run: echo "Hello, World!"
-    - run: dir
+    - run: node --version
+    - run: gcc --version
+    - run: python --version
