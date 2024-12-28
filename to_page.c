@@ -78,7 +78,9 @@ int to_page(char *filename) {
         }
         P++;
     }
-    filename[len-4] = '\0';
+    if (!strcmp(&(filename[len-4]), ".txt")) { /* if endwith ".txt" */
+        filename[len-4] = '\0'; /* remove ".txt" */
+    }
     /* read the content of the file */
     char content[1024];
     fgets(content, 1024, fp);
