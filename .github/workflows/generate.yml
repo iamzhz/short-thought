@@ -12,6 +12,7 @@ jobs:
     - run: gcc to_page.c -o to_page
     - run: mkdir -p build
     - run: ./to_page 2024 > build/2024.html
+    - run: ./to_page 2025 > build/2025.html
     - run: rm ./to_page
     - uses: JamesIves/github-pages-deploy-action@v4
       with:
